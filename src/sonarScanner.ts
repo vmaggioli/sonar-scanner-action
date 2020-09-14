@@ -42,6 +42,7 @@ export const sonarScanner = async () => {
 
   if (javaBinariesDir && javaBinariesDir.trim().length > 0) {
     sonarParameters.push(`-Dsonar.java.binaries=${javaBinariesDir}`);
+    sonarParameters.push(`-Dsonar.java.libraries=${javaBinariesDir}`);
   }
 
   core.info(`
